@@ -1,14 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholas Malm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas Malm - Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to my portfolio</h1>
-    <p>This site is under construction.</p>
-    <br>
-    <p>This is a test, to test the connection.</p>
+
+  <!-- ========= NAVIGATION ========= -->
+  <nav class="main-nav">
+    <div class="nav-content">
+      <a href="#hero" class="logo">NM</a>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========= HERO SECTION ========= -->
+  <header id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title animate-slide-up">Nicholas Malm</h1>
+      <p class="hero-subtitle animate-slide-up">Software Developer</p>
+      <div class="hero-cta-container">
+        <a href="#projects" class="cta-btn">My projects</a>
+        <a href="contact.html" class="cta-btn outline">Contact me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========= MAIN CONTENT ========= -->
+  <main>
+
+    <!-- ========= ABOUT SECTION ========= -->
+    <section id="about" class="section about-section" data-animate>
+      <h2 class="section-title">About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="intro-text">
+            Hi there! 👋 My name is Nicholas Malm and I'm a first-year student studying Software Development at Kristianstad University. <br>
+            <br>
+            I'm a 24-year-old from Sweden with a background in photography and videography as hobbies. I'm a problem solver and I can't resist the challenge of debugging when something doesn't work on the computer. In my spare time I enjoy skydiving and photography.📷
+          </p>
+
+          <div class="education-card">
+            <h3>Education</h3>
+            <p class="university">Kristianstad University</p>
+            <p class="program">Software Development Programme (180hp)</p>
+            <div class="courses">
+              <h4>Examples of completed courses:</h4>
+              <ul class="course-list">
+                <li>Object-Oriented Programming (Java)</li>
+                <li>Algorithms and Data Structures</li>
+                <li>Database Technology</li>
+                <li>Computer Security</li>
+                <li>Agile Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img 
+            src="https://place-hold.it/400x500/2a3d45/fff?text=Nicholas" 
+            alt="Nicholas Malm porträtt" 
+            class="profile-image"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= SKILLS SECTION ========= -->
+    <section id="skills" class="section skills-section" data-animate>
+    <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3 class="skill-title">
+            <i class="fas fa-code"></i> Languages
+          </h3>
+          <ul class="skill-list">
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+          <h3 class="skill-title">
+            <i class="fas fa-database"></i> Databases
+          </h3>
+          <ul class="skill-list">
+            <li>MySQL</li>
+            <li>SQL Server</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-title">
+            <i class="fas fa-tools"></i> Tools & Methods
+          </h3>
+          <ul class="skill-list">
+            <li>Git</li>
+            <li>Scrum</li>
+            <li>Jira</li>
+            <li>Agile</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= PROJECTS SECTION ========= -->
+    <section id="projects" class="section projects-section" data-animate>
+    <h2 class="section-title">Featured Projects</h2>
+      <div class="project-card">
+        <div class="project-image">
+          <img 
+            src="assets/images/solace-logo-transparent.png" 
+            alt="Solace Health App Preview"
+          >
+        </div>
+        <div class="project-details">
+          <h3 class="project-title">Solace Health App</h3>
+          <p class="project-description">
+            A collaborative school project where we developed a health application using agile methodologies.
+            I contributed to various aspects, including design, coding, testing, and documentation.
+          </p>
+          <div class="project-tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Firebase</span>
+            <span class="tech-pill">Scrum</span>
+          </div>
+          <div class="project-links">
+            <a 
+              href="https://github.com/HugNil/Solace" 
+              target="_blank" 
+              class="project-link"
+            >
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========= SCRIPTS ========= -->
+  <script src="js/scripts.js"></script>
 </body>
 </html>
