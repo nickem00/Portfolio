@@ -1,28 +1,75 @@
 .contact {
     width: 100%;
     height: 100vh;
-    background-color: #020202;
+    background-color: var(--dark-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorativt bakgrundselement */
+.contact::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 99, 71, 0.05);
+    top: -100px;
+    left: -100px;
+    z-index: 0;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 99, 71, 0.03);
+    bottom: -50px;
+    right: -50px;
+    z-index: 0;
 }
 
 .contact-content {
     max-width: 800px;
     width: 100%;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dekorativ linje under rubriken */
+.contact-content h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .contact-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #5f5f5f;
+    color: var(--muted-text);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-button {
@@ -30,15 +77,45 @@
     padding: 12px 24px;
     background-color: #2c2c2c;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 8px;
     text-decoration: none;
     border: 1px solid transparent;
-    transition: background-color 0.3s ease, border 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+    z-index: -1;
 }
 
 .contact-button:hover {
-    background-color: #141414;
-    border: 1px solid #b14c1d;
     color: white;
+    border-color: var(--primary-color);
+}
+
+.contact-button:hover::before {
+    width: 100%;
+}
+
+/* Responsiva anpassningar */
+@media (max-width: 768px) {
+    .contact-content h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-content p {
+        font-size: 1rem;
+    }
 }

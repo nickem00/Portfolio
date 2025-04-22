@@ -7,7 +7,8 @@ function Hero() {
         <section className="hero" id="home" style={{ backgroundImage: `url(${heroBackground})` }}>
             <div className="hero-content">
                 <h1>Hej, jag är Nicholas Malm</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ratione ab magnam assumenda, esse, praesentium facere sequi neque tempora ut recusandae similique harum, qui at rerum consequatur nisi odit modi!</p>
+                <p>Jag är en passionerad systemutvecklare som älskar att skapa moderna webblösningar och lösa problem med kod.</p>
+                <a href="#projects" className="hero-button">Se mina projekt</a>
             </div>
         </section>
     )

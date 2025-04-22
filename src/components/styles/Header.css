@@ -22,6 +22,30 @@
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    position: relative;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6347, transparent);
+    transition: width 0.5s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
 }
 
 .nav-links a {
@@ -29,9 +53,51 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ff6347; /* Tomato color on hover */
+    color: #ff6347;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Animation for active navigation item */
+.nav-links a.active {
+    color: #ff6347;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
 }
