@@ -31,7 +31,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header-content">
-                <div className="logo">Nicholas Malm</div>
+                <a href="#home" className="logo">Nicholas Malm</a>
                 <nav className="nav-links">
                     <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
                     <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>

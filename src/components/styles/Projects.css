@@ -1,17 +1,19 @@
 .projects {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height for better content flow */
     background-color: #020202;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    padding: 2rem 0; /* Added padding for better spacing */
 }
 
 .projects-content {
-    max-width: 90%;
-    width: 100%;
+    max-width: 1200px; /* Set a max-width for larger screens */
+    width: 90%;
+    margin: 0 auto;
 }
 
 .projects-content h2 {
@@ -38,26 +40,54 @@
 }
 
 .project-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    width: 100%;
 }
 
 .project-card {
     background-color: #3a3a3a;
     padding: 20px;
-    width: 30rem;
-    height: 20rem;
+    height: auto;
+    aspect-ratio: 3/2; /* Maintains proportions */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-content h2 {
+        font-size: 2rem;
+    }
+    
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-content {
+        width: 95%;
+    }
+    
+    .project-cards {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        font-size: 1rem;
+    }
 }

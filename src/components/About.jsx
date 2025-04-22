@@ -7,8 +7,9 @@ function About() {
             <div className="about-content">
                 <h2>About Me</h2>
                 <p>
-                Jag heter Nicholas Malm och är en passionerad systemutvecklare med intresse för teknik, programmering och problemlösning. 
-                Jag älskar att bygga moderna webblösningar och utveckla både frontend och backend!
+                    I'm a computer science student currently finishing my second year at Kristianstad University.
+                    <br />
+                    I have a passion for programming and technology, and I love learning new things.
                 </p>
             </div>
         </section>

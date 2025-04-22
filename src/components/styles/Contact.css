@@ -56,11 +56,12 @@
     content: '';
     position: absolute;
     width: 50px;
-    height: 3px;
     background-color: var(--primary-color);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
+    /* clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%); */
+    height: 3px;
 }
 
 .contact-content p {
@@ -96,8 +97,9 @@
     width: 0;
     height: 100%;
     background-color: var(--primary-color);
-    transition: width 0.3s ease;
     z-index: -1;
+    transition: width 0.3s ease;
+    border-radius: 0;
 }
 
 .contact-button:hover {
