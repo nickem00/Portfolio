@@ -1,0 +1,13 @@
+Optimizing video - HandBrake (https://handbrake.fr)
+
+Illustrations:
+unDraw - https://undraw.co/illustrations
+DrawKit - https://www.drawkit.io/
+
+Photos/Background:
+wallpapers.comn - https://wallpapers.com/abstract
+Pexels - https://www.pexels.com/search/abstract/
+
+Later:
+/photography
+/project/:id
