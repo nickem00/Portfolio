@@ -6,6 +6,13 @@ import Contact from "./components/Contact"
 
 function App() {
 
+  const ready = false; // Change this to true when ready
+  if (!ready) return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <h1>Under Development</h1>
+    </div>
+  )
+
   return (
     <>
       <Header />

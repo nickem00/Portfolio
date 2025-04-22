@@ -26,3 +26,5 @@ dist-ssr
 package-lock.json
 yarn-error.log
 notes.txt
+.vite/
+package-lock.json
