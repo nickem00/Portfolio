@@ -47,6 +47,7 @@
     left: 0;
     width: 50%;
     height: 3px;
+    /* Användning av CSS-variabel för att hålla en konsekvent primärfärg genom hela sidan */
     background-color: var(--primary-color);
 }
 
@@ -64,6 +65,7 @@
     text-decoration: none;
     border: 1px solid transparent;
     margin-top: 2rem;
+    /* Mjuk övergång för bakgrundsfärg, kantlinje och textfärg när användaren hovrar över knappen */
     transition: background-color 0.3s, border 0.3s, color 0.3s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     font-weight: 500;

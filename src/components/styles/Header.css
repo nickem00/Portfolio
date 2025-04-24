@@ -25,6 +25,7 @@
     position: relative;
     padding: 5px 10px;
     letter-spacing: 1px;
+    /* Mjuk övergång för alla ändringar (färg, position) med en varaktighet på 0,3 sekunder */
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -39,6 +40,7 @@
     width: 0;
     height: 2px;
     background:#ff6347;
+    /* Transition som gör att den understrykning som visas vid hover mjukt växer från 0% till 100% bredd */
     transition: width 0.3s ease;
 }
 
@@ -62,6 +64,7 @@
     font-size: 18px;
     position: relative;
     padding: 5px 0;
+    /* Mjuk övergång för alla ändringar med en varaktighet på 0,3 sekunder */
     transition: all 0.3s ease;
 }
 
@@ -73,6 +76,7 @@
     width: 0;
     height: 2px;
     background-color: #ff6347;
+    /* Transition som gör att den understrykning som visas vid hover mjukt växer från 0% till 100% bredd */
     transition: width 0.3s ease;
 }
 

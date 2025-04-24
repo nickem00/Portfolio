@@ -33,6 +33,7 @@
     position: absolute;
     bottom: -10px;
     left: 50%;
+    /* Centrerar elementet horisontellt genom att flytta det 50% från vänsterkanten */
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
@@ -46,9 +47,14 @@
     width: 100%;
 }
 
+h3 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
 .project-card {
     background-color: #3a3a3a;
-    padding: 20px;
+    padding: 0; /* Remove padding to allow image to fill entire card */
     height: auto;
     aspect-ratio: 3/2; /* Maintains proportions */
     border-radius: 10px;
@@ -58,12 +64,36 @@
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+    /* Mjuk övergångseffekt för transform och box-shadow egenskaperna när användaren hovrar över kortet */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevents image overflow */
+    position: relative; /* For positioning elements */
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Makes text more readable on image */
 }
 
 .project-card:hover {
+    /* Förflyttar kortet 5px uppåt när användaren hovrar över det, skapar en "lyft" effekt */
     transform: translateY(-5px);
+    /* Förstärker skuggan för att öka djupeffekten när kortet "lyfts upp" */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    z-index: 1000;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes image cover the entire container */
+    /* Gör bilden lite suddig och mörkare för att text som ligger ovanpå ska synas bättre */
+    filter: blur(1.5px) brightness(0.7);
+    z-index: 0;
 }
 
 /* Responsive adjustments */
