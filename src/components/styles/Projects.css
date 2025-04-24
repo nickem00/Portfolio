@@ -78,6 +78,7 @@ h3 {
     transform: translateY(-5px);
     /* Förstärker skuggan för att öka djupeffekten när kortet "lyfts upp" */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .project-card h3 {
