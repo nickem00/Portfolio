@@ -1,5 +1,6 @@
 import React from "react";
 import './styles/About.css';
+import profPic1 from '../assets/images/prof-pic-1.png'
 
 function About() {
     return (
@@ -11,6 +12,7 @@ function About() {
                     <br />
                     I have a passion for programming and technology, and I love learning new things.
                 </p>
+                <img className="profile-picture" src={profPic1} alt="Picture of me" />
             </div>
         </section>
     )
