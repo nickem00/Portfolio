@@ -9,7 +9,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* Removed color-scheme declaration */
   color: var(--light-text);
   background-color: var(--dark-bg);
 
@@ -19,26 +19,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: var(--primary-color);
-  text-decoration: inherit;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #ff8b7a; /* Lighter variant of primary color */
-}
-
 html, body {
   height: 100%;
-  scroll-snap-type: y mandatory;
+  /* Kommentera ut denna rad för att inaktivera scroll-snap */
+  /* scroll-snap-type: y mandatory;  */
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
 
 .hero, .projects, .about, .contact {
-  scroll-snap-align: start;
+  /* Kommentera ut denna rad för att inaktivera scroll-snap */
+  /* scroll-snap-align: start; */
 }
 
 body {
@@ -113,23 +104,5 @@ button:focus-visible {
   
   h2 {
     font-size: 2em;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --dark-bg: #f5f5f5;
-    --dark-accent: #e0e0e0;
-    --light-text: #213547;
-    --muted-text: #666666;
-  }
-  
-  a:hover {
-    color: #e05a40; /* Darker variant for light mode */
-  }
-  
-  button, .button {
-    background-color: #f0f0f0;
-    color: #333;
   }
 }
