@@ -26,6 +26,7 @@
     padding: 2.5rem;
     max-width: 600px;
     width: 90%;
+    margin: 0 1rem 0 1rem;
     border-radius: 15px;
     position: relative;
     text-align: center;
@@ -138,4 +139,36 @@
     background: rgba(255, 255, 255, 0);
     color: var(--primary-color);
     transform: rotate(90deg);
+}
+
+.modal-skills {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+.modal-skill-tag {
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 15px;
+    display: inline-block;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.modal-skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-color);
 }

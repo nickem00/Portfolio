@@ -4,6 +4,7 @@ import Hero from "./components/Hero"
 import Projects from "./components/Projects"
 import About from "./components/About"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 
 function App() {
   // Ändra denna variabel till false för att inaktivera auto-scroll funktionen
@@ -32,6 +33,7 @@ function App() {
       <Projects />
       <About />
       <Contact />
+      <Footer />
     </>
   )
 }

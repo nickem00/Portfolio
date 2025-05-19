@@ -30,27 +30,10 @@
     text-decoration: none;
 }
 
-
-
-.logo::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background:#ff6347;
-    /* Transition som gör att den understrykning som visas vid hover mjukt växer från 0% till 100% bredd */
-    transition: width 0.3s ease;
-}
-
 .logo:hover {
     color: white;
 }
 
-.logo:hover::after {
-    width: 100%;
-}
 
 .nav-links {
     display: flex;

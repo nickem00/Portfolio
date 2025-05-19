@@ -117,8 +117,7 @@ h3 {
         grid-template-columns: 1fr; /* Stack cards on very small screens */
         gap: 1.5rem;
     }
-    
-    .project-card {
+      .project-card {
         font-size: 1rem;
     }
 }
