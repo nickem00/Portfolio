@@ -21,14 +21,25 @@
 
 html, body {
   height: 100%;
-  /* Kommentera ut denna rad för att inaktivera scroll-snap */
+  /* Comment out this line to disable scroll-snap */
   /* scroll-snap-type: y mandatory;  */
   scroll-behavior: smooth;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar but keep functionality */
+/* For Webkit-based browsers (Chrome, Safari etc.) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: auto;
 }
 
 .hero, .projects, .about, .contact {
-  /* Kommentera ut denna rad för att inaktivera scroll-snap */
+  /* Comment out this line to disable scroll-snap */
   /* scroll-snap-align: start; */
 }
 

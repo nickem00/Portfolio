@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './styles/ProjectModal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function ProjectModal({ project, onClose }) {
+    // Använd useEffect för att hantera scrollning
+    useEffect(() => {
+        if (project) {
+            // Spara nuvarande body overflow style
+            const originalStyle = window.getComputedStyle(document.body).overflow;
+            // Inaktivera scrollning
+            document.body.style.overflow = 'hidden';
+            
+            // Rensa när komponenten tas bort
+            return () => {
+                document.body.style.overflow = originalStyle;
+            };
+        }
+    }, [project]);
+
     if (!project) return null;
 
     return (
