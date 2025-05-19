@@ -12,10 +12,19 @@ function ProjectModal({ project, onClose }) {
                 <button className="close-button" onClick={onClose}>x</button>
                 <img src={project.image} alt={project.title} />
                 <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <p className="project-authors">
+                <p>{project.description}</p>                <p className="project-authors">
                     {project.authors && <strong>Authors:</strong>} {project.authors && project.authors.join(", ")}
                 </p>
+                {project.skills && project.skills.length > 0 && (
+                    <div className="modal-skills">
+                        <strong>Skills:</strong>
+                        <div className="skills-container">
+                            {project.skills.map((skill, index) => (
+                                <span key={index} className="modal-skill-tag">{skill}</span>
+                            ))}
+                        </div>
+                    </div>
+                )}
                 <div className="modal-links">
                     <a href={project.github} className="icon-button github" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />

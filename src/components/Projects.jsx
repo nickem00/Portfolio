@@ -6,14 +6,32 @@ import ProjectModal from "./ProjectModal";
 import solaceImage from '../assets/images/solace-logo.png'
 import chatterLogo from '../assets/images/chatter-logo.png'
 import moreComingLogo from '../assets/images/more-coming.png'
+import house18Screenshot from '../assets/images/house18Screenshot.png'
 
 const projectData = [
+    {
+        title: "House 18",
+        description: "House 18 is a fullstack web application built as part of a university project during the " +
+        "course Full Stack Development - DA219B at Kristianstad University. The app simulates a modern clothing " +
+        "store with user authentication, a responsive shopping exprerience and admin product management. Feel free to read more at " +
+        "the README on GitHub.",
+        image: house18Screenshot,
+        github: "https://github.com/nickem00/house-18",
+        demo: "https://house-18.vercel.app/",
+        authors: [
+            "Nicholas Malm (Me)",
+            "Hugo Nilsson",
+            "Jacob Hellgren",
+            "Pontus Havmyr"
+        ],
+        skills: ["React", "Vite", "Node.js", "Express", "MongoDB", "CSS"]
+    },
     {
         title: "Solace",
         description: "Solace is a desktop application we developed during the Agile Development Methods course. " + 
         "Its purpose is to help users manage stress and anxiety by logging their mood and stress levels," +
-        "which are visualized in a dashboard. The app is built with Python and Tkinter. It was a group project" +
-        "following agile workflows from concept to final product.",
+        " which are visualized in a dashboard. The app is built with Python and Tkinter. It was a group project" +
+        " following agile workflows from concept to final product.",
         image: solaceImage, // se till att lägga till rätt bild i public/assets
         github: "https://github.com/HugNil/Solace",
         demo: null,
@@ -22,7 +40,8 @@ const projectData = [
             "Jacob Hellgren",
             "Hugo Nilsson",
             "Pontus Havmyr"
-        ]
+        ],
+        skills: ["Python", "Tkinter", "MYSQL", "Agile"]
     },
     {
         title: "Course work Frontend",
@@ -33,14 +52,16 @@ const projectData = [
         image: chatterLogo,
         github: "https://github.com/nickem00/FrontEnd-Module2",
         demo: "https://front-end-module2.vercel.app/",
-        authors: ["Nicholas Malm"]
+        authors: ["Nicholas Malm"],
+        skills: ["JavaScript", "HTML", "CSS", "API", "Responsive Design"]
     },
     {
         title: "More comming..",
         description: "No more featured projects yet. Feel free to check out my GitHub in the mean time.",
         image: moreComingLogo,
         github: "https://github.com/nickem00/",
-        demo: null
+        demo: null,
+        skills: []
     }
 ];
 
@@ -50,8 +71,7 @@ function Projects() {
     return (
         <section className="projects" id="projects">
             <div className="projects-content">
-                <h2>My Projects</h2>
-                <div className="project-cards">
+                <h2>My Projects</h2>                <div className="project-cards">
                     {projectData.map((project, index) => (
                         <div key={index} className="project-card" onClick={() => setSelectedProject(project)}>
                             <img className="project-image" src={project.image} alt={project.title} />
