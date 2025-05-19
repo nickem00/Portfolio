@@ -24,14 +24,14 @@ const projectData = [
             "Jacob Hellgren",
             "Pontus Havmyr"
         ],
-        skills: ["React", "Node.js", "Express", "MongoDB", "CSS"]
+        skills: ["React", "Vite", "Node.js", "Express", "MongoDB", "CSS"]
     },
     {
         title: "Solace",
         description: "Solace is a desktop application we developed during the Agile Development Methods course. " + 
         "Its purpose is to help users manage stress and anxiety by logging their mood and stress levels," +
-        "which are visualized in a dashboard. The app is built with Python and Tkinter. It was a group project" +
-        "following agile workflows from concept to final product.",
+        " which are visualized in a dashboard. The app is built with Python and Tkinter. It was a group project" +
+        " following agile workflows from concept to final product.",
         image: solaceImage, // se till att lägga till rätt bild i public/assets
         github: "https://github.com/HugNil/Solace",
         demo: null,
@@ -41,7 +41,7 @@ const projectData = [
             "Hugo Nilsson",
             "Pontus Havmyr"
         ],
-        skills: ["Python", "Tkinter", "SQLite", "Agile"]
+        skills: ["Python", "Tkinter", "MYSQL", "Agile"]
     },
     {
         title: "Course work Frontend",
