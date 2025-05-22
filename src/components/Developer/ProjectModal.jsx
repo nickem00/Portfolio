@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import './styles/ProjectModal.css';
+import '../styles/ProjectModal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 

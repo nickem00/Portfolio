@@ -1,6 +1,6 @@
 import React from "react";
-import './styles/Hero.css';
-import heroBackground from '../assets/images/hero-background.png';
+import '../styles/Hero.css';
+import heroBackground from '../../assets/images/hero-background.png';
 
 function Hero() {
     return (
