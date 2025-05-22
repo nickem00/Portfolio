@@ -1,10 +1,14 @@
 import { useEffect } from "react"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+import { Routes, Route } from "react-router-dom"
+import Header from "./components/Developer/Header"
+import Hero from "./components/Developer/Hero"
+import Projects from "./components/Developer/Projects"
+import About from "./components/Developer/About"
+import Contact from "./components/Developer/Contact"
+import Footer from "./components/Developer/Footer"
+import Developer from "./pages/Developer"
+import LinkTree from "./pages/LinkTree"
+import Photography from "./pages/Photography"
 
 function App() {
   // Ändra denna variabel till false för att inaktivera auto-scroll funktionen
@@ -25,15 +29,13 @@ function App() {
       <h1>Under Development</h1>
     </div>
   )
-
   return (
     <>
-      <Header />
-      <Hero />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={ <LinkTree /> }/>
+        <Route path="/dev" element={ <Developer /> } />
+        <Route path="/photo" element={ <Photography /> } />
+      </Routes>
     </>
   )
 }

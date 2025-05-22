@@ -1,6 +1,6 @@
 import React from "react";
-import './styles/About.css';
-import profPic1 from '../assets/images/prof-pic-1.png'
+import '../styles/About.css';
+import profPic1 from '../../assets/images/prof-pic-1.png'
 
 function About() {
     return (

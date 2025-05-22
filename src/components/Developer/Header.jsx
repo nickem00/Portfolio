@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './styles/Header.css';
+import '../styles/Header.css';
+import { Link } from "react-router-dom";
 
 function Header() {
     const [activeSection, setActiveSection] = useState('home');
@@ -31,7 +32,7 @@ function Header() {
     return (
         <header className="header">
             <div className="header-content">
-                <a href="#home" className="logo">Nicholas Malm</a>
+                <Link to="/" className="logo">Nicholas Malm</Link>
                 <nav className="nav-links">
                     <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
                     <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>

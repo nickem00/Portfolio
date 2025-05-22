@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import './styles/Projects.css';
+import '../styles/Projects.css';
 import ProjectModal from "./ProjectModal";
 
 // Images
-import solaceImage from '../assets/images/solace-logo.png'
-import chatterLogo from '../assets/images/chatter-logo.png'
-import moreComingLogo from '../assets/images/more-coming.png'
-import house18Screenshot from '../assets/images/house18Screenshot.png'
+import solaceImage from '../../assets/images/solace-logo.png'
+import chatterLogo from '../../assets/images/chatter-logo.png'
+import moreComingLogo from '../../assets/images/more-coming.png'
+import house18Screenshot from '../../assets/images/house18Screenshot.png'
 
 const projectData = [
     {

@@ -1,0 +1,233 @@
+/* LinkTree.css - Styling for the LinkTree component */
+
+* {
+    box-sizing: border-box;
+}
+
+.link-tree {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+.link-tree-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.profile-bio {
+    text-align: center;
+    color: var(--muted-text);
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+.link-tree-divider {
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0.5rem 0 1.5rem;
+}
+
+.portfolio-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.portfolio-link {
+    flex: 1;
+    min-width: 240px;
+    max-width: 340px;
+    text-decoration: none;
+    background: linear-gradient(145deg, #141414, #242424);
+    border: 1px solid #333;
+    color: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.portfolio-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.portfolio-link h3 {
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.portfolio-link p {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #2c2c2c;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-text {
+    margin-top: 3rem;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .link-tree {
+        padding: 1rem 0.5rem;
+        width: 100vw;
+    }
+
+    .link-tree-container {
+        gap: 1rem;
+        width: 100%;
+        max-width: calc(100% - 10px);
+        padding: 0 5px;
+    }
+    
+    .profile-section {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .profile-name {
+        font-size: 1.8rem;
+    }
+    
+    .profile-bio {
+        font-size: 0.9rem;
+        width: 100%;
+        padding: 0 5px;
+    }
+    
+    .portfolio-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5px;
+        margin: 1rem 0;
+    }
+    
+    .portfolio-link {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 1rem;
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .social-links {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .footer-text {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .link-tree {
+        padding: 1rem 0;
+        max-width: 100vw;
+    }
+    
+    .link-tree-container {
+        max-width: calc(100vw - 20px);
+        padding: 0 10px;
+        margin: 2rem 0;
+    }
+    
+    .profile-section {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+    
+    .portfolio-links {
+        gap: 0.5rem;
+    }
+    
+    .portfolio-link {
+        padding: 0.8rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        max-width: calc(100vw - 30px);
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+}
